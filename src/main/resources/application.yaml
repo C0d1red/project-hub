@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: project-hub
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+  datasource:
+    url: jdbc:postgresql://localhost:5432/project-hub
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      mode: never
+  jpa:
+    open-in-view: false
+
+jwt:
+  secret: gf1fd48d98f47g
+  expired: 3600000
